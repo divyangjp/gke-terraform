@@ -8,6 +8,11 @@ variable "project" {
   default = "hexkey"
 }
 
+variable "gh_repo" {
+  type  = string
+  default = "divyangjp/hexkey-k8s-apps"
+}
+
 variable "gke_master_ipv4_cidr_block" {
   type    = string
   default = "172.23.0.0/28"
