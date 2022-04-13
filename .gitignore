@@ -1,0 +1,29 @@
+*.dll
+*.exe
+.DS_Store
+example.tf
+terraform.tfplan
+*.tfplan
+terraform.tfstate
+*.backup
+*.bkp
+./*.tfstate
+.terraform/
+*.log
+*.bak
+*~
+.*.swp
+.idea
+*.iml
+*.test
+*.iml
+
+# Test exclusions
+!command/testdata/**/*.tfstate
+!command/testdata/**/.terraform/
+
+# Coverage
+coverage.txt
+
+#k8s
+kubeconfig*
