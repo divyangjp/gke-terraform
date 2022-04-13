@@ -1,3 +1,4 @@
 provider "google" {
-  region  = "europe-west1"
+  region  = "australia-southeast1"
+  project = "hexkey"
 }

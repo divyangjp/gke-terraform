@@ -3,6 +3,7 @@ resource "google_container_cluster" "private" {
 
   name                     = "private"
   location                 = var.region
+  project                  = var.project
 
   network                  = google_compute_network.custom.name
   subnetwork               = google_compute_subnetwork.web.id
