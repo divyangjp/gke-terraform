@@ -1,0 +1,39 @@
+# This file is maintained automatically by "terraform init".
+# Manual edits may be lost in future updates.
+
+provider "registry.terraform.io/hashicorp/google" {
+  version     = "3.71.0"
+  constraints = "3.71.0"
+  hashes = [
+    "h1:strwLDRCpjyfaUQVz877k1jf9bS5dNU8eDvj2mYzALo=",
+    "zh:0ed7d1a873011aa0b0d00d2e377b4fbf4a2d4164c69956afa65adb47220d7ca0",
+    "zh:80448ba1bc094cf2a4c1b7aa00519846fe636c5f964e53d7a5706a6cbdd009cd",
+    "zh:81dab2e452c23e3c4f659799b0b076c129cb9fe866037fdde94ecb28dbea56be",
+    "zh:8b15d9c37cd04303f866b66bffe13c15d8e3254459958ebaad184d63dc1f5da0",
+    "zh:920b8b65a6900057c664cb099d64cc58f88ca4ab38e13e2c805cf2413a82795b",
+    "zh:bd022571709bff30d9d18a1bb2a383df85027b01ffbbf92ce9e514d48557899e",
+    "zh:c68b306b61e637a66f8c20580f23143517f957ed74b52476e4094a14fd72e615",
+    "zh:e5f2fe60bc99612cc089265d7003f6d2007304ec37367a43eb65716de2d1f491",
+    "zh:e865d87acf9c357b12ed55538d8d974a708762ed6288119e4c33591cae70159e",
+    "zh:f7b52e22b86f11a06f822a9b1176a4d50e120a6b4cfce61a0574007b5d143370",
+    "zh:ff98905d147426cfc5b018184706774e323993f773333802999eec9974c58773",
+  ]
+}
+
+provider "registry.terraform.io/hashicorp/google-beta" {
+  version = "4.17.0"
+  hashes = [
+    "h1:NP2D5ITL9L+1g+YTBcvaJ5qfXsxrUKDkKhBgpKD7frU=",
+    "zh:0dba72800f9bd0bba25c69031460ce855465096c660443af403b0e0056b72f51",
+    "zh:1a6f0202d57ea6f2dfe34d3f807590c37b54e3028b03c3dcce7330983752cf95",
+    "zh:327048b683b177f53e8771f5712894f64ca2df1575b1363d63e68d7ee0899745",
+    "zh:3c1e0cf69fea3b889179fab75074fb87ac467b8283b6ef990e9780da6481cb1f",
+    "zh:58af4c63c7ab183770006a4880e15e7a83d79df1de4bf19651b0cbeb8ee25eec",
+    "zh:6019b9892a1b4728c7e2966a83b4b16c7d09f791927fc4fc184d9207fc5b1046",
+    "zh:99dc820ff2332edece971915455f246dbb8f14abff473173a97e0a72bb0aaa29",
+    "zh:ae211298562d884f40b21df7bb303a42cd49617b991403ccd34663482c7568b4",
+    "zh:c3dc452345304a63885b673ad5d6dcd377be374a79699b08eb1a65cec94ed7bc",
+    "zh:cd37cf886ff3a3bde5ec39132a67f0ffeab0a5657691f1bd72e1a5f1f0a0c4ce",
+    "zh:e1effca4de247e569db29a635b45587326579e1310e2ec227b003cadc045bb3d",
+  ]
+}
