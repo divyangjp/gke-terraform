@@ -14,14 +14,16 @@ resource "google_container_cluster" "private" {
     master_ipv4_cidr_block  = var.gke_master_ipv4_cidr_block
   }
 
-  master_authorized_networks_config {
-    dynamic "cidr_blocks" {
-        for_each = var.authorized_source_ranges
-        content {
-            cidr_block = cidr_blocks.value
-        }
-    }
-   }
+  # TEMP removal of authorized network to test github actions deployment
+  #
+  #master_authorized_networks_config {
+  #  dynamic "cidr_blocks" {
+  #      for_each = var.authorized_source_ranges
+  #      content {
+  #          cidr_block = cidr_blocks.value
+  #      }
+  #  }
+  # }
 
   maintenance_policy {
     recurring_window {
