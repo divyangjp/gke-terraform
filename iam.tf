@@ -4,6 +4,7 @@ locals {
     "roles/compute.admin",
     "roles/container.admin",
     "roles/storage.admin",
+    "roles/secretmanager.admin",
   ]
 }
 
