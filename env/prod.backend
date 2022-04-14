@@ -1,0 +1,2 @@
+bucket  = "hexkey-tfstate"
+prefix  = "hk"

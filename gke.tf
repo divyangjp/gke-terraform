@@ -36,6 +36,10 @@ resource "google_container_cluster" "private" {
   # Enable Autopilot for this cluster
   enable_autopilot = true
 
+  vertical_pod_autoscaling {
+    enabled = true
+  }
+
   # Configuration of cluster IP allocation for VPC-native clusters
   ip_allocation_policy {
     cluster_secondary_range_name  = "pods"
