@@ -54,3 +54,11 @@ resource "google_service_networking_connection" "private-vpc-connection" {
     google_compute_global_address.private-ip-peering.name
   ]
 }
+
+# Global External IPv4 used with HTTP(s) load balancer
+resource "google_compute_global_address" "external-ipv4" {
+  project      = var.project
+  name         = "${var.project}-address"
+  ip_version   = "IPV4"
+  address_type = "EXTERNAL"
+}
