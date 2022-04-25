@@ -17,6 +17,11 @@ resource "google_compute_router_nat" "web" {
   subnetwork {
     name                    = google_compute_subnetwork.web.id
     source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
-  }
+    }
+  subnetwork {
+    name                    = google_compute_subnetwork.web-std.id
+    source_ip_ranges_to_nat = ["ALL_IP_RANGES"]
+    }
+
   depends_on                         = [ google_compute_address.web ]
 }

@@ -46,3 +46,32 @@ resource "google_compute_global_address" "external-ipv4" {
   ip_version   = "IPV4"
   address_type = "EXTERNAL"
 }
+
+
+# Subnetwork for Standard gke cluster
+resource "google_compute_subnetwork" "web-std" {
+  name          = "web-std"
+  ip_cidr_range = "20.20.20.0/24"
+  network       = google_compute_network.custom.id
+  region        = var.region
+  project       = var.project
+
+  secondary_ip_range  = [
+    {
+        range_name    = "services"
+        ip_cidr_range = "20.20.21.0/24"
+    },
+    {
+        range_name    = "pods"
+        ip_cidr_range = "20.1.0.0/20"
+    }
+  ]
+
+  log_config {
+    aggregation_interval = "INTERVAL_10_MIN"
+    flow_sampling        = 0.5
+    metadata             = "INCLUDE_ALL_METADATA"
+  }
+
+  private_ip_google_access = true
+}
