@@ -19,6 +19,11 @@ resource "google_container_cluster" "hk-std" {
 
   networking_mode = "VPC_NATIVE"
 
+  # Enable workload identity
+  workload_identity_config {
+    workload_pool = "${data.google_project.project.project_id}.svc.id.goog"
+  }
+
   # TEMP removal of authorized network to test github actions deployment
   #
   #master_authorized_networks_config {
